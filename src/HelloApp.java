@@ -1,7 +1,20 @@
 public class HelloApp {
 
     public static void main(String[] args) {
-            String name = args[0];
-            System.out.println("Hello, " + name + "!");
+
+        if (args.length == 0) {
+            System.out.println("Hello, World!");
+        } else {
+            String result = "Hello, ";
+
+            for (String name : args) {
+                result += name + ", ";
+            }
+
+            // remove last comma and space
+            result = result.substring(0, result.length() - 2);
+
+            System.out.println(result + "!");
+        }
     }
 }
