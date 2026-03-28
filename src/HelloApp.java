@@ -2,20 +2,13 @@ public class HelloApp {
 
     public static void main(String[] args) {
 
-
         if (args.length == 0) {
             System.out.println("Hello, World!");
             return;
         }
 
-        StringBuilder sb = new StringBuilder();
+        String names = String.join(", ", args);
 
-        for (String name : args) {
-            sb.append(name).append(", ");
-        }
-
-        String result = sb.toString().substring(0, sb.length() - 2);
-
-        System.out.println("Hello, " + result + "!");
+        System.out.println("Hello, " + names + "!");
     }
 }
